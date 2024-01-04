@@ -10,12 +10,26 @@ const Tables = lazy(() => import('../pages/Tables'));
 const Alerts = lazy(() => import('../pages/UiElements/Alerts'));
 const Buttons = lazy(() => import('../pages/UiElements/Buttons'));
 const Categories = lazy(() => import('../pages/Categories'));
+const Books = lazy(() => import('../pages/Books'));
+const Loans = lazy(() => import('../pages/Loans'));
 
 const coreRoutes = [
   {
     path: '/categorias',
     title: 'Categoria',
     component: Categories,
+  },
+
+  {
+    path: '/livros',
+    title: 'Livros',
+    component: Books,
+  },
+
+  {
+    path: '/emprestimos',
+    title: 'Emprestimos',
+    component: Loans,
   },
 
   {

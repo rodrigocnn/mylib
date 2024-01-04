@@ -1,10 +1,10 @@
 import Breadcrumb from '../../components/Breadcrumb';
 import TableThree from '../../components/TableThree';
 
-const Categories = () => {
+const Loans = () => {
   return (
     <>
-      <Breadcrumb pageName="Categorias" />
+      <Breadcrumb pageName="Empréstimos" />
 
       <div className="flex flex-col gap-5">
         <div className="px-0 ">
@@ -18,4 +18,4 @@ const Categories = () => {
   );
 };
 
-export default Categories;
+export default Loans;
