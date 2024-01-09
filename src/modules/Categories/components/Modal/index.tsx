@@ -6,13 +6,22 @@ import {
   DialogFooter,
 } from '@material-tailwind/react';
 import { useDispatch, useSelector } from 'react-redux';
-import { handleOpenModal } from '../../slice';
+import { handleOpenModal, setCategory } from '../../slice';
+import { RootState } from '../../../../store';
 
 export function Modal() {
-  // @ts-ignore
-
   const openModal = useSelector((state: RootState) => state.category.openModal);
+  const category = useSelector((state: RootState) => state.category.category);
   const dispatch = useDispatch();
+
+  const handleCategoryChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const newCategory = event.target.value;
+    dispatch(setCategory(newCategory));
+  };
+
+  const handleConfirmClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    event.preventDefault();
+  };
 
   return (
     <>
@@ -28,10 +37,14 @@ export function Modal() {
       >
         <DialogHeader placeholder={undefined}>Cadastrar Categoria</DialogHeader>
         <DialogBody placeholder={undefined}>
-          The key to more success is to have a lot of pillows. Put it this way,
-          it took me twenty five years to get these plants, twenty five years of
-          blood sweat and tears, and I&apos;m never giving up, I&apos;m just
-          getting started. I&apos;m up to something. Fan luv.
+          <input
+            value={category}
+            onChange={handleCategoryChange}
+            type="text"
+            className="w-full rounded-lg border-[1.5px] border-stroke bg-transparent py-3 px-5 font-medium
+            outline-none transition focus:border-primary active:border-primary disabled:cursor-default
+            disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:focus:border-primary"
+          ></input>
         </DialogBody>
         <DialogFooter placeholder={undefined}>
           <Button
@@ -43,7 +56,12 @@ export function Modal() {
           >
             <span>Cancel</span>
           </Button>
-          <Button placeholder={'teste'} variant="gradient" color="green">
+          <Button
+            onClick={handleConfirmClick}
+            placeholder={'teste'}
+            variant="gradient"
+            color="green"
+          >
             <span>Confirm</span>
           </Button>
         </DialogFooter>

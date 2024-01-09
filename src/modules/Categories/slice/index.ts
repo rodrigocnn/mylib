@@ -1,7 +1,8 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { PayloadAction, createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   openModal: false,
+  category: '',
 };
 
 const categorySlice = createSlice({
@@ -10,10 +11,15 @@ const categorySlice = createSlice({
   reducers: {
     handleOpenModal: (state) => {
       state.openModal = !state.openModal;
+      state.category = '';
+    },
+
+    setCategory: (state, action: PayloadAction<string>) => {
+      state.category = action.payload;
     },
   },
 });
 
 const categoryReducer = categorySlice.reducer;
 export default categoryReducer;
-export const { handleOpenModal } = categorySlice.actions;
+export const { handleOpenModal, setCategory } = categorySlice.actions;
