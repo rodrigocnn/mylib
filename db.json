@@ -1,8 +1,36 @@
 {
   "categories": [
-    { "id": 1, "title": "Auto Ajuda" },
-    { "id": 2, "title": "Informática" },
-    { "id": 3, "title": "Economia" },
-    { "id": 4, "title": "Idiomas" }
+    {
+      "id": 1,
+      "title": "Auto Ajuda"
+    },
+    {
+      "id": 2,
+      "title": "Informática"
+    },
+    {
+      "id": 3,
+      "title": "Economia"
+    },
+    {
+      "id": 4,
+      "title": "Idiomas"
+    },
+    {
+      "title": "Ficção",
+      "id": 5
+    },
+    {
+      "title": "Infantil",
+      "id": 6
+    },
+    {
+      "title": "Terror",
+      "id": 7
+    },
+    {
+      "title": "Carros",
+      "id": 8
+    }
   ]
 }
