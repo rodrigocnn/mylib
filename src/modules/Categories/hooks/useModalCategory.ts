@@ -1,7 +1,8 @@
 import useApi from '../../../hooks/useApi';
-import { setCategory, openModal } from '../slice';
+import { setCategory, openModal, setEnableSearchCategories } from '../slice';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../../../store';
+import { toast } from 'react-toastify';
 
 export function useModalCategory() {
   const dispatch = useDispatch();
@@ -19,10 +20,11 @@ export function useModalCategory() {
     const response = await sendDataPost('categories', { title: category });
 
     if (response.data) {
-      //toast('Registro Inserido com Sucesso', { type: 'success' });
+      toast('Registro Inserido com Sucesso', { type: 'success' });
+      dispatch(setEnableSearchCategories(true));
       handleOpenModal();
     } else {
-      //toast('Não foi possivel realizar operação', { type: 'error' });
+      toast('Não foi possivel realizar operação', { type: 'error' });
       handleOpenModal();
     }
   };

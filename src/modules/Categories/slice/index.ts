@@ -9,12 +9,14 @@ interface CategoryState {
   open: boolean;
   category: string;
   categories: ICategory[];
+  enableSearch: boolean;
 }
 
 const initialState: CategoryState = {
   open: false,
   category: '',
   categories: [],
+  enableSearch: false,
 };
 
 const categorySlice = createSlice({
@@ -30,12 +32,16 @@ const categorySlice = createSlice({
       state.category = action.payload;
     },
 
-    setCategories: (state, action: PayloadAction<[]>) => {
+    setCategories: (state, action: PayloadAction<ICategory[]>) => {
       state.categories = action.payload;
+    },
+
+    setEnableSearchCategories: (state, action: PayloadAction<boolean>) => {
+      state.enableSearch = action.payload;
     },
   },
 });
 
 const categoryReducer = categorySlice.reducer;
 export default categoryReducer;
-export const { openModal, setCategory, setCategories } = categorySlice.actions;
+export const { openModal, setCategory, setCategories, setEnableSearchCategories } = categorySlice.actions;

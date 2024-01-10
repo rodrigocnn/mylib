@@ -3,8 +3,6 @@ import { useCategories } from '../../hooks/useCategories';
 export const TableCategories = () => {
   const { loading, categories } = useCategories();
 
-  console.log('Categorias', categories);
-
   return (
     <div
       className="rounded-sm border border-stroke bg-white px-5 pt-6 pb-2.5 shadow-default
@@ -20,8 +18,8 @@ export const TableCategories = () => {
           </thead>
           <tbody>
             {categories.map((item) => (
-              <tr>
-                <td key={item.id} className="border-b border-[#eee] py-5 px-4 pl-9 dark:border-strokedark xl:pl-11">
+              <tr key={item.id}>
+                <td className="border-b border-[#eee] py-5 px-4 pl-9 dark:border-strokedark xl:pl-11">
                   <h5 className="font-medium text-black dark:text-white">{item.title}</h5>
                 </td>
 
