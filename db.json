@@ -1,20 +1,12 @@
 {
   "categories": [
     {
-      "id": 1,
-      "title": "Auto Ajuda"
+      "title": "Religião",
+      "id": 1
     },
     {
-      "title": "Informática",
+      "title": "Documentários",
       "id": 2
-    },
-    {
-      "title": "Carros",
-      "id": 3
-    },
-    {
-      "title": "Religioso",
-      "id": 4
     }
   ]
 }

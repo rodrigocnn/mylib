@@ -1,7 +1,7 @@
 import { useCategories } from '../../hooks/useCategories';
 
 export const TableCategories = () => {
-  const { loading, categories } = useCategories();
+  const { loading, categories, handleClickDelete } = useCategories();
 
   return (
     <div
@@ -44,7 +44,7 @@ export const TableCategories = () => {
                         />
                       </svg>
                     </button>
-                    <button className="hover:text-primary">
+                    <button onClick={(event) => handleClickDelete(event, item.id)} className="hover:text-primary">
                       <svg
                         className="fill-current"
                         width="18"
