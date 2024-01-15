@@ -7,6 +7,47 @@
     {
       "title": "Documentários",
       "id": 2
+    },
+    {
+      "title": "Economia",
+      "id": 3
+    }
+  ],
+  "books": [
+    {
+      "id": 1,
+      "id_category": 1,
+      "title": "O livro das religiões",
+      "author": "Globo Livros",
+      "created_at": "12/01/2024"
+    },
+    {
+      "id": 2,
+      "id_category": 2,
+      "title": "Nunca é hora de parar",
+      "author": "David Goggins",
+      "created_at": "12/01/2024"
+    },
+    {
+      "id": 3,
+      "id_category": 3,
+      "title": "Pense e Enriqueça",
+      "author": "Napoleon Hill",
+      "created_at": "12/01/2024"
+    },
+    {
+      "id_category": "",
+      "title": "Pai Rico Pai Pobre",
+      "author": "Robert K",
+      " id_category": "3",
+      "id": 4
+    },
+    {
+      "id_category": "",
+      "title": "Deixe de ser pobre",
+      "author": "Magno",
+      " id_category": "3",
+      "id": 5
     }
   ]
 }
