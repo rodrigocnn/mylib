@@ -1,7 +1,7 @@
 import { useBooks } from '../../hooks/useBooks';
 
 export const TableBooks = () => {
-  const { books } = useBooks();
+  const { books, handleClickDelete } = useBooks();
 
   return (
     <div
@@ -44,7 +44,7 @@ export const TableBooks = () => {
                         />
                       </svg>
                     </button>
-                    <button onClick={() => {}} className="hover:text-primary">
+                    <button onClick={(event) => handleClickDelete(event, item.id)} className="hover:text-primary">
                       <svg
                         className="fill-current"
                         width="18"

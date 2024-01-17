@@ -1,6 +1,7 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
 
 interface IBook {
+  id: number;
   id_category: number | string;
   title: string;
   author: string;
@@ -15,6 +16,7 @@ interface BookState {
 }
 
 const INITIAL_FORM = {
+  id: 0,
   id_category: '' as string,
   title: '',
   author: '',
