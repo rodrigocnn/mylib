@@ -1,6 +1,6 @@
 import Breadcrumb from '../../components/Breadcrumb';
-import TableThree from '../../components/TableThree';
 import { ModalLoan } from '../../modules/Loans/components/Modal';
+import { TableLoans } from '../../modules/Loans/components/TableLoans';
 import { useModalLoan } from '../../modules/Loans/hooks/useModalLoan';
 
 const Loans = () => {
@@ -19,7 +19,7 @@ const Loans = () => {
           </button>
         </div>
         <ModalLoan />
-        <TableThree />
+        <TableLoans />
       </div>
     </>
   );
