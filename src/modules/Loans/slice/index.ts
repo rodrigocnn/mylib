@@ -47,7 +47,7 @@ const loanSlice = createSlice({
       state.loans = action.payload;
     },
 
-    setEnableSearchCategories: (state, action: PayloadAction<boolean>) => {
+    setEnableSearchLoans: (state, action: PayloadAction<boolean>) => {
       state.enableSearch = action.payload;
     },
   },
@@ -55,4 +55,4 @@ const loanSlice = createSlice({
 
 const loanReducer = loanSlice.reducer;
 export default loanReducer;
-export const { openModal, setLoan, setLoans, setEnableSearchCategories } = loanSlice.actions;
+export const { openModal, setLoan, setLoans, setEnableSearchLoans } = loanSlice.actions;

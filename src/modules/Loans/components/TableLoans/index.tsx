@@ -1,5 +1,7 @@
+import { useLoans } from '../../hooks/useLoans';
+
 export const TableLoans = () => {
-  //const { books, handleClickDelete } = useBooks();
+  const { loans, handleClickDelete } = useLoans();
 
   return (
     <div
@@ -17,10 +19,18 @@ export const TableLoans = () => {
             </tr>
           </thead>
           <tbody>
-            {/* {books.map((item) => (
+            {loans.map((item) => (
               <tr key={item.id}>
                 <td className="border-b border-[#eee] py-5 px-4 pl-9 dark:border-strokedark xl:pl-11">
-                  <h5 className="font-medium text-black dark:text-white">{item.title}</h5>
+                  <h5 className="font-medium text-black dark:text-white">{item.idBook}</h5>
+                </td>
+
+                <td className="border-b border-[#eee] py-5 px-4 pl-9 dark:border-strokedark xl:pl-11">
+                  <h5 className="font-medium text-black dark:text-white">{item.idUser}</h5>
+                </td>
+
+                <td className="border-b border-[#eee] py-5 px-4 pl-9 dark:border-strokedark xl:pl-11">
+                  <h5 className="font-medium text-black dark:text-white">{item.returnDate}</h5>
                 </td>
 
                 <td className="border-b border-[#eee] py-5 px-4 dark:border-strokedark">
@@ -74,7 +84,7 @@ export const TableLoans = () => {
                   </div>
                 </td>
               </tr>
-            ))} */}
+            ))}
           </tbody>
         </table>
       </div>
